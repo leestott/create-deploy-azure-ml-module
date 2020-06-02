@@ -3,7 +3,7 @@
 This repository contains a labs to help you get started with Creating and deploying Azure machine learning module
 .
 
-[![Open in Visual Studio Online](https://img.shields.io/endpoint?style=social&url=https%3A%2F%2Faka.ms%2Fvso-badge)](https://online.visualstudio.com/environments/new?name=MSLearn-DataScience&repo=leestott/create-deploy-azure-ml-module)
+[![Open in Visual Studio Online](https://img.shields.io/endpoint?style=social&url=https%3A%2F%2Faka.ms%2Fvso-badge)](https://online.visualstudio.com/environments/new?name=MSLearn-create-deploy-azure-ml-module&repo=leestott/create-deploy-azure-ml-module)
 
 ## Manually creating a VS Online Container
 
