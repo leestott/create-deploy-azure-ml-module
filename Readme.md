@@ -1,7 +1,6 @@
 # MS Learn Exercise - Creating and deploying Azure machine learning module
 
-This repository contains a labs to help you get started with Creating and deploying Azure machine learning module
-.
+This repository contains a labs to help you get started with Creating and deploying Azure machine learning module.
 
 [![Open in Visual Studio Online](https://img.shields.io/endpoint?style=social&url=https%3A%2F%2Faka.ms%2Fvso-badge)](https://online.visualstudio.com/environments/new?name=MSLearn-create-deploy-azure-ml-module&repo=leestott/create-deploy-azure-ml-module)
 
@@ -16,12 +15,10 @@ To complete the labs, you'll need the following:
     3. Sign in using the Microsoft account associated with your Azure subscription.
     4. Click **Create environment**. If you don't already have a Visual Studio Online plan, create one. This is used to track resource utlization by your Visual Studio Online environments. Then create an environment with the following settings:
         - **Environment Name**: *A name for your environment - for example, **MSLearn-create-deploy-azure-ml-module**.*
-        - **Git Repository**: leestott/create-deploy-azure-ml
+        - **Git Repository**: leestott/create-deploy-azure-ml-module
         - **Instance Type**: Standard (Linux) 4 cores, 8GB RAM
         - **Suspend idle environment after**: 120 minutes
     5. Wait for the environment to be created, and then click **Connect** to connect to it. This will open a browser-based instance of Visual Studio Code.
-
-> **Tip**: you can change the color scheme back to a dark background if you prefer - just click the **&#9881;** icon at the bottom left and select a new **Color Theme**.
 
 ## Labs
 
