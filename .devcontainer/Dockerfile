@@ -27,7 +27,10 @@ ARG USER_GID=$USER_UID
 # Copy environment.yml (if found) to a temp locaition so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
 COPY environment.yml* .devcontainer/noop.txt /tmp/conda-tmp/
-
+# Add Azure CLI 
+ADD https://aka.ms/InstallAzureCLIDeb /tmp
+RUN bash /tmp/InstallAzureCLIDeb
+#
 # Configure apt and install packages
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
@@ -50,9 +53,6 @@ RUN apt-get update \
     ## && pip --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
     ## && rm -rf /tmp/pip-tmp \
     #
-    # Add Azure CLI 
-    ADD https://aka.ms/InstallAzureCLIDeb /tmp
-    RUN bash /tmp/InstallAzureCLIDeb
     #
     # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
     && groupadd --gid $USER_GID $USERNAME \
