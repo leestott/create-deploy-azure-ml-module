@@ -14,8 +14,8 @@
      // Add the IDs of extensions you want installed when the container is created.
 		 "extensions":[
 			"ms-python.python",
-			"ms-vscode.azure-account"
-			"ms-vscode.azurecli"
+			"ms-vscode.azure-account",
+			"ms-vscode.azurecli",
 			"ms-toolsai.vscode-ai"
 		 ]
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
