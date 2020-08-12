@@ -23,8 +23,7 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	//"postCreateCommand": "pip install -r requirements.txt",
-	"postCreateCommand": "curl -L https://aka.ms/InstallAzureCli | bash",
-
+	
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode"
 }
