@@ -58,9 +58,6 @@ RUN apt-get update -yq\
     #
     # Be sure git is up to date due to DSA 4659-1, DSA 4657-1
     && apt-get upgrade -yq git \
-    #
-    # Configure apt and install packages
-RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
     #
     # Verify git, process tools, lsb-release (common in install instructions for CLIs) installed
@@ -77,6 +74,8 @@ RUN apt-get update \
     && pip --disable-pip-version-check --no-cache-dir install ipywidgets>=7.0.0 \
     && pip --disable-pip-version-check --no-cache-dir install bqplot \
     #
+    #
+    # Configure apt and install packages
     #
     # Install GitHub CLI v 0.11.0
     && echo "Downloading github CLI..." \
