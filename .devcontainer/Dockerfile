@@ -63,17 +63,6 @@ RUN apt-get update -yq\
     # Verify git, process tools, lsb-release (common in install instructions for CLIs) installed
     && apt-get -y install git openssh-client less iproute2 procps lsb-release \
     #
-    # Install DataScience Python Libraries
-    && pip --disable-pip-version-check --no-cache-dir install pylint \ 
-    && pip --disable-pip-version-check --no-cache-dir install jupyter \
-    && pip --disable-pip-version-check --no-cache-dir install numpy \
-    && pip --disable-pip-version-check --no-cache-dir install pandas \
-    && pip --disable-pip-version-check --no-cache-dir install scipy \
-    && pip --disable-pip-version-check --no-cache-dir install folium>=0.9.1 \
-    && pip --disable-pip-version-check --no-cache-dir install matplotlib \
-    && pip --disable-pip-version-check --no-cache-dir install ipywidgets>=7.0.0 \
-    && pip --disable-pip-version-check --no-cache-dir install bqplot \
-    #
     #
     # Configure apt and install packages
     #
@@ -159,6 +148,17 @@ RUN apt-get update -yq\
     && sudo -u codespace git clone -b v1.5.4 -c advice.detachedHead=false --depth 1 https://github.com/jasongin/nvs ${NVS_HOME} 2>&1 \
     && sudo -u codespace /bin/bash ${NVS_HOME}/nvs.sh install \
     && rm -rf ${NVS_HOME}/.git \
+    #
+    # Install DataScience Python Libraries
+    && pip --disable-pip-version-check --no-cache-dir install pylint \ 
+    && pip --disable-pip-version-check --no-cache-dir install jupyter \
+    && pip --disable-pip-version-check --no-cache-dir install numpy \
+    && pip --disable-pip-version-check --no-cache-dir install pandas \
+    && pip --disable-pip-version-check --no-cache-dir install scipy \
+    && pip --disable-pip-version-check --no-cache-dir install folium>=0.9.1 \
+    && pip --disable-pip-version-check --no-cache-dir install matplotlib \
+    && pip --disable-pip-version-check --no-cache-dir install ipywidgets>=7.0.0 \
+    && pip --disable-pip-version-check --no-cache-dir install bqplot \
     #
     # Clear the nvs cache and link to an existing node binary to reduce the size of the image.
     && rm ${NVS_HOME}/cache/* \
